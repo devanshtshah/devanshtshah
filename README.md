@@ -1,2 +1,2 @@
 "# devanshtshah" 
-print("Hi Omkar kasa kay")
+print("firsttimecoding")
