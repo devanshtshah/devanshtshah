@@ -1,0 +1,1640 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Devansh Shah — Finance & Accounting portfolio: experience, education, certifications, projects, and skills." />
+  <meta name="theme-color" content="#0b0f1a" />
+  <title>Devansh Shah | Portfolio</title>
+
+  <!-- Premium fonts (optional but recommended) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      /* Premium palette */
+      --bg: #0b0f1a;
+      --bg2:#0a1426;
+      --card: rgba(255,255,255,.055);     /* glass surface */
+      --card2: rgba(255,255,255,.04);
+      --text:#eef2ff;
+      --muted:#b8c1de;
+      --muted2:#8f9bbf;
+      --line: rgba(255,255,255,.10);
+      --line2: rgba(255,255,255,.14);
+
+      /* Luxury accents */
+      --gold:#d8b46a;
+      --gold2:#f0d79a;
+      --ice:#5dd6ff;
+
+      --shadow: 0 20px 50px rgba(0,0,0,.45);
+      --shadow2: 0 14px 30px rgba(0,0,0,.30);
+
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 1120px;
+      --pad: 22px;
+      --headerH: 78px;
+
+      --font: "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      --serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+
+    /* Light theme (premium, not stark white) */
+    [data-theme="light"]{
+      --bg:#f6f7fb;
+      --bg2:#edf0f7;
+      --card: rgba(10,15,26,.04);
+      --card2: rgba(10,15,26,.03);
+      --text:#0b0f1a;
+      --muted:#2f3a57;
+      --muted2:#586587;
+      --line: rgba(10,15,26,.10);
+      --line2: rgba(10,15,26,.14);
+      --shadow: 0 18px 42px rgba(10,15,26,.10);
+      --shadow2: 0 12px 26px rgba(10,15,26,.08);
+      --gold:#b5872f;
+      --gold2:#d2a44d;
+      --ice:#007aa6;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:var(--font);
+      color:var(--text);
+
+      /* Premium background: subtle light blooms + texture */
+      background:
+        radial-gradient(1000px 600px at 18% -8%, color-mix(in oklab, var(--ice) 22%, transparent), transparent 60%),
+        radial-gradient(900px 520px at 92% 0%, color-mix(in oklab, var(--gold) 20%, transparent), transparent 55%),
+        radial-gradient(700px 500px at 50% 110%, color-mix(in oklab, var(--gold2) 14%, transparent), transparent 55%),
+        linear-gradient(180deg, var(--bg), var(--bg2));
+      position:relative;
+      overflow-x:hidden;
+    }
+
+    /* Texture overlay (very subtle) */
+    body::before{
+      content:"";
+      position:fixed; inset:0;
+      pointer-events:none;
+      background:
+        repeating-linear-gradient(  0deg, rgba(255,255,255,.018), rgba(255,255,255,.018) 1px, transparent 1px, transparent 6px),
+        repeating-linear-gradient( 90deg, rgba(255,255,255,.012), rgba(255,255,255,.012) 1px, transparent 1px, transparent 7px);
+      mix-blend-mode: overlay;
+      opacity:.55;
+      z-index:-1;
+    }
+
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
+    .skip{
+      position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden;
+    }
+    .skip:focus{
+      left:18px; top:14px; width:auto; height:auto; padding:10px 12px;
+      background:var(--card); border:1px solid var(--line); border-radius:12px; z-index:9999;
+    }
+
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:1000;
+      backdrop-filter:saturate(1.6) blur(10px);
+      background: color-mix(in oklab, var(--bg) 75%, transparent);
+      border-bottom:1px solid var(--line);
+    }
+    @supports not (backdrop-filter: blur(10px)){
+      header{ background: color-mix(in oklab, var(--bg) 92%, transparent); }
+    }
+
+    /* Scroll progress bar */
+    .progressBar{height:3px; width:100%; position:relative; overflow:hidden}
+    .progressFill{
+      position:absolute; inset:0;
+      width:0%;
+      background: linear-gradient(90deg, var(--ice), var(--gold2), var(--gold));
+      transition: width .08s linear;
+    }
+
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      min-height:calc(var(--headerH) - 3px);
+      gap:14px;
+    }
+
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      text-decoration:none;
+      padding:10px 0;
+    }
+    .logo{
+      width:36px; height:36px; border-radius:12px;
+      background:
+        radial-gradient(12px 12px at 30% 25%, rgba(255,255,255,.5), transparent 60%),
+        linear-gradient(135deg, var(--gold2), var(--ice));
+      box-shadow: 0 10px 24px rgba(0,0,0,.20);
+      border:1px solid color-mix(in oklab, var(--line2) 55%, transparent);
+    }
+    .brand b{
+      letter-spacing:.2px;
+      font-weight:700;
+    }
+    .brand small{
+      display:block;
+      color:var(--muted2);
+      font-size:12px;
+      margin-top:2px;
+    }
+
+    nav.links{
+      display:flex; align-items:center; gap:10px;
+    }
+    nav.links a{
+      text-decoration:none;
+      padding:10px 10px;
+      border-radius:12px;
+      color:var(--muted);
+      font-size:14px;
+      border:1px solid transparent;
+      transition:.2s ease;
+    }
+    nav.links a:hover{
+      color:var(--text);
+      border-color:var(--line);
+      background: color-mix(in oklab, var(--card2) 80%, transparent);
+    }
+    nav.links a[aria-current="true"]{
+      color:var(--text);
+      border-color: color-mix(in oklab, var(--gold) 45%, var(--line));
+      background: color-mix(in oklab, var(--card) 85%, transparent);
+    }
+
+    .actions{display:flex; align-items:center; gap:10px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: color-mix(in oklab, var(--card) 88%, transparent);
+      color:var(--text);
+      text-decoration:none;
+      cursor:pointer;
+      transition: transform .18s ease, border-color .18s ease, background .18s ease;
+      font-size:14px;
+      white-space:nowrap;
+      box-shadow: 0 0 0 rgba(0,0,0,0);
+    }
+    .btn:hover{
+      transform: translateY(-1px);
+      border-color: color-mix(in oklab, var(--ice) 32%, var(--line));
+      background: color-mix(in oklab, var(--card) 92%, transparent);
+    }
+    .btn.primary{
+      border-color: color-mix(in oklab, var(--gold) 60%, var(--line));
+      background:
+        radial-gradient(14px 14px at 25% 30%, rgba(255,255,255,.35), transparent 60%),
+        linear-gradient(135deg, var(--gold2), var(--gold));
+      color: #121015;
+      font-weight:800;
+      box-shadow: 0 14px 30px rgba(0,0,0,.22);
+    }
+    .btn.primary:hover{
+      border-color: color-mix(in oklab, var(--gold2) 70%, var(--line2));
+    }
+    .btn.ghost{background:transparent}
+    .hamburger{display:none}
+
+    .mobileMenu{display:none; padding: 10px 0 14px}
+    .mobileMenu.open{display:block}
+    .mobileMenu a{
+      display:block;
+      padding:10px 8px;
+      border-radius:12px;
+      text-decoration:none;
+      color:var(--muted);
+      border:1px solid transparent;
+    }
+    .mobileMenu a:hover{
+      border-color:var(--line);
+      color:var(--text);
+      background: color-mix(in oklab, var(--card2) 88%, transparent);
+    }
+
+    /* Hero */
+    .hero{padding:56px 0 18px}
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap:18px;
+      align-items:stretch;
+    }
+
+    .panel{
+      background: color-mix(in oklab, var(--card) 92%, transparent);
+      border:1px solid color-mix(in oklab, var(--line2) 70%, transparent);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: var(--pad);
+      position:relative;
+      overflow:hidden;
+    }
+    .panel::before{
+      content:"";
+      position:absolute; inset:-1px;
+      background:
+        radial-gradient(800px 260px at 20% 0%, color-mix(in oklab, var(--ice) 14%, transparent), transparent 60%),
+        radial-gradient(800px 260px at 90% 0%, color-mix(in oklab, var(--gold) 14%, transparent), transparent 60%);
+      opacity:.9;
+      pointer-events:none;
+    }
+    .panel > *{position:relative}
+
+    .kicker{
+      font-size:12px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:var(--muted2);
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .dot{
+      width:8px; height:8px; border-radius:99px;
+      background: color-mix(in oklab, var(--gold2) 60%, var(--ice));
+      box-shadow: 0 0 0 6px color-mix(in oklab, var(--gold2) 14%, transparent);
+    }
+
+    h1{
+      margin:12px 0 10px;
+      font-family: var(--serif);
+      font-size:46px;
+      line-height:1.03;
+      letter-spacing:-.02em;
+      font-weight:600;
+    }
+    .tagline{
+      margin:0;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.7;
+      max-width:74ch;
+    }
+    .ctaRow{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top:18px;
+    }
+    .chips{
+      display:flex; flex-wrap:wrap; gap:8px;
+      margin-top:14px;
+    }
+    .chip{
+      font-size:12px;
+      color:var(--muted);
+      border:1px solid var(--line);
+      background: color-mix(in oklab, var(--card2) 90%, transparent);
+      padding:7px 10px;
+      border-radius:999px;
+    }
+    .mini{font-size:12px; color:var(--muted2); margin-top:14px}
+    code{font-family:var(--mono)}
+
+    /* Quick facts */
+    .quick{display:flex; flex-direction:column; gap:12px}
+    .quick h3{
+      margin:0;
+      font-size:14px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:var(--muted2);
+    }
+    .fact{
+      display:flex; justify-content:space-between; align-items:center;
+      padding:10px 12px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background: color-mix(in oklab, var(--card2) 92%, transparent);
+      gap:10px;
+    }
+    .fact span{color:var(--muted2); font-size:12px}
+    .fact b{font-size:13px}
+    .fact code{font-family:var(--mono); font-size:12px; color:var(--text)}
+    .copy{
+      border:none; background:transparent; color:var(--ice);
+      cursor:pointer; font-weight:700;
+      padding:6px 8px; border-radius:10px;
+    }
+    .copy:hover{background:color-mix(in oklab, var(--ice) 12%, transparent)}
+
+    .toast{
+      position:fixed; bottom:16px; left:50%;
+      transform:translateX(-50%);
+      background: color-mix(in oklab, var(--card) 94%, transparent);
+      border:1px solid var(--line);
+      color:var(--text);
+      padding:10px 12px;
+      border-radius:14px;
+      box-shadow: var(--shadow2);
+      opacity:0; pointer-events:none;
+      transition:.2s ease;
+      z-index:2000;
+      font-size:14px;
+    }
+    .toast.show{opacity:1; transform:translateX(-50%) translateY(-6px)}
+
+    /* Sections + premium transition */
+    section{
+      padding:34px 0 0;
+      scroll-margin-top: calc(var(--headerH) + 10px);
+      position:relative;
+    }
+
+    .sectionHead{
+      display:flex; align-items:flex-end; justify-content:space-between;
+      gap:14px;
+      margin-bottom:14px;
+    }
+    .sectionHead h2{
+      margin:0;
+      font-size:26px;
+      letter-spacing:-.01em;
+      font-weight:700;
+    }
+    .sectionHead p{
+      margin:0;
+      color:var(--muted2);
+      font-size:14px;
+      max-width:64ch;
+      line-height:1.6;
+    }
+
+    section.active .sectionHead h2{
+      text-shadow: 0 0 26px color-mix(in oklab, var(--gold) 18%, transparent);
+    }
+
+    .sectionSep{
+      height: 54px;
+      margin-top: 26px;
+      background:
+        linear-gradient(90deg,
+          color-mix(in oklab, var(--ice) 10%, transparent),
+          color-mix(in oklab, var(--gold2) 12%, transparent),
+          color-mix(in oklab, var(--gold) 10%, transparent)
+        );
+      border-top: 1px solid var(--line);
+      clip-path: polygon(0 0, 100% 12px, 100% 100%, 0 100%);
+      opacity: .9;
+      transform: translateY(0);
+      transition: transform .35s ease, opacity .35s ease;
+    }
+    section.active .sectionSep{
+      opacity: 1;
+      transform: translateY(-2px);
+    }
+
+    .grid2{display:grid; grid-template-columns: 1.2fr .8fr; gap:16px}
+    .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:16px}
+    .gridAuto{display:grid; grid-template-columns: repeat(12, 1fr); gap:16px}
+    .span4{grid-column: span 4}
+    .span6{grid-column: span 6}
+    .span12{grid-column: span 12}
+
+    /* Cards */
+    .card{
+      background: color-mix(in oklab, var(--card) 95%, transparent);
+      border:1px solid color-mix(in oklab, var(--line2) 70%, transparent);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow2);
+      padding: var(--pad);
+      position:relative;
+      overflow:hidden;
+      transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+    }
+    .card::before{
+      content:"";
+      position:absolute; inset:-1px;
+      background:
+        radial-gradient(700px 220px at 20% 0%, color-mix(in oklab, var(--ice) 10%, transparent), transparent 65%),
+        radial-gradient(700px 220px at 90% 0%, color-mix(in oklab, var(--gold) 10%, transparent), transparent 65%);
+      opacity:.9;
+      pointer-events:none;
+    }
+    .card > *{position:relative}
+    .card:hover{
+      transform: translateY(-2px);
+      border-color: color-mix(in oklab, var(--gold2) 30%, var(--line2));
+      box-shadow: 0 18px 40px rgba(0,0,0,.28);
+    }
+
+    .cardTop{
+      display:flex; align-items:flex-start; justify-content:space-between; gap:10px;
+      margin-bottom:10px;
+    }
+    .title{
+      margin:0;
+      font-size:18px;
+      letter-spacing:-.01em;
+      font-weight:700;
+    }
+    .meta{
+      color:var(--muted2);
+      font-size:13px;
+      margin-top:4px;
+      display:flex; flex-wrap:wrap; gap:10px;
+    }
+    .badge{
+      font-size:12px;
+      color:var(--muted);
+      border:1px solid var(--line);
+      background: color-mix(in oklab, var(--card2) 92%, transparent);
+      padding:6px 10px;
+      border-radius:999px;
+      white-space:nowrap;
+    }
+    ul{
+      margin:10px 0 0 18px;
+      color:var(--muted);
+      line-height:1.68;
+      padding:0;
+    }
+    li{margin:6px 0}
+    .small{font-size:13px; color:var(--muted); line-height:1.65}
+    .moreRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+
+    /* Filters */
+    .filters{
+      display:flex; flex-wrap:wrap; gap:8px;
+      margin: 8px 0 18px;
+    }
+    .filterBtn{
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: color-mix(in oklab, var(--card2) 92%, transparent);
+      color:var(--muted);
+      cursor:pointer;
+      font-size:13px;
+      transition:.18s ease;
+    }
+    .filterBtn:hover{transform:translateY(-1px); color:var(--text)}
+    .filterBtn.active{
+      color:var(--text);
+      border-color: color-mix(in oklab, var(--gold2) 50%, var(--line));
+      background: color-mix(in oklab, var(--gold2) 12%, var(--card2));
+    }
+
+    /* Project cards */
+    .project{display:flex; flex-direction:column; gap:10px; min-height: 228px}
+    .project p{margin:0; color:var(--muted); line-height:1.65}
+    .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:auto}
+    .tag{
+      font-size:12px;
+      border:1px solid var(--line);
+      padding:6px 9px;
+      border-radius:999px;
+      color:var(--muted);
+      background: color-mix(in oklab, var(--card2) 92%, transparent);
+    }
+
+    /* Skills pills */
+    .pillset{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+    .pill{
+      font-size:12px;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: color-mix(in oklab, var(--card2) 92%, transparent);
+      color:var(--muted);
+    }
+
+    /* Contact */
+    .contactGrid{display:grid; grid-template-columns: 1fr 1fr; gap:16px}
+    .input{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: color-mix(in oklab, var(--card2) 92%, transparent);
+      color:var(--text);
+      font-size:14px;
+      outline:none;
+    }
+    .input:focus{
+      border-color: color-mix(in oklab, var(--ice) 45%, var(--line));
+      box-shadow: 0 0 0 4px color-mix(in oklab, var(--ice) 10%, transparent);
+    }
+    textarea.input{min-height:130px; resize:vertical}
+
+    footer{
+      padding:26px 0 40px;
+      color:var(--muted2);
+      text-align:center;
+      border-top:1px solid var(--line);
+      background: color-mix(in oklab, var(--bg) 78%, transparent);
+    }
+    footer a{color:var(--ice); text-decoration:none}
+
+    /* Reveal */
+    .reveal{opacity:0; transform:translateY(10px); transition:.55s ease}
+    .reveal.in{opacity:1; transform:translateY(0)}
+
+    /* Modal (consistent premium) */
+    .modalOverlay{
+      position:fixed; inset:0;
+      background:rgba(0,0,0,.58);
+      display:none;
+      z-index:2500;
+      padding:18px;
+    }
+    .modalOverlay.open{display:grid; place-items:center}
+    .modal{
+      width:min(920px, 100%);
+      max-height: 86vh;
+      overflow:auto;
+      border-radius: 20px;
+      border:1px solid color-mix(in oklab, var(--line2) 85%, transparent);
+      background: color-mix(in oklab, var(--card) 98%, transparent);
+      box-shadow: var(--shadow);
+      padding: 18px 18px 16px;
+      outline:none;
+      position:relative;
+    }
+    .modal::before{
+      content:"";
+      position:absolute; inset:-1px;
+      background:
+        radial-gradient(900px 260px at 15% 0%, color-mix(in oklab, var(--ice) 12%, transparent), transparent 65%),
+        radial-gradient(900px 260px at 88% 0%, color-mix(in oklab, var(--gold2) 12%, transparent), transparent 65%);
+      pointer-events:none;
+      opacity:.95;
+    }
+    .modal > *{position:relative}
+    .modalHead{
+      display:flex; align-items:flex-start; justify-content:space-between; gap:10px;
+      margin-bottom:10px;
+    }
+    .modalHead h3{
+      margin:0;
+      font-size:18px;
+      font-weight:800;
+      letter-spacing:-.01em;
+    }
+    .x{
+      border:1px solid var(--line);
+      background:transparent;
+      color:var(--text);
+      border-radius:14px;
+      padding:8px 10px;
+      cursor:pointer;
+      transition:.18s ease;
+    }
+    .x:hover{border-color: color-mix(in oklab, var(--gold2) 45%, var(--line))}
+    .modalBody{color:var(--muted); line-height:1.78}
+    .modalBody h4{color:var(--text); margin:14px 0 6px}
+    .modalBody ul{margin-top:8px}
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto}
+      .reveal{transition:none}
+      .btn, .card, .sectionSep{transition:none}
+      .progressFill{transition:none}
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .heroGrid{grid-template-columns:1fr}
+      .grid2{grid-template-columns:1fr}
+      .grid3{grid-template-columns:1fr}
+      .span4{grid-column: span 6}
+      .span6{grid-column: span 12}
+    }
+    @media (max-width: 740px){
+      h1{font-size:38px}
+      nav.links{display:none}
+      .hamburger{display:inline-flex}
+      .span4{grid-column: span 12}
+      .contactGrid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header>
+    <div class="progressBar" aria-hidden="true">
+      <div class="progressFill" id="progressFill"></div>
+    </div>
+
+    <div class="wrap">
+      <div class="nav">
+        <a class="brand" href="#top" aria-label="Go to top">
+          <span class="logo" aria-hidden="true"></span>
+          <span>
+            <b>Devansh Shah</b>
+            <small>Finance • Accounting • Valuation</small>
+          </span>
+        </a>
+
+        <nav class="links" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+          <a href="#certs">Certifications</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="actions">
+          <button class="btn hamburger" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu">☰ Menu</button>
+          <button class="btn" id="themeBtn" aria-label="Toggle theme">◐ Theme</button>
+
+          <!-- Replace with your hosted resume path -->
+          <a class="btn primary" href="assets/Devansh_Shah_Resume.pdf" target="_blank" rel="noopener">⬇ Resume</a>
+        </div>
+      </div>
+
+      <div class="mobileMenu" id="mobileMenu" aria-label="Mobile">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#certs">Certifications</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <div id="top" class="wrap hero">
+      <div class="heroGrid">
+        <div class="panel reveal">
+          <div class="kicker"><span class="dot" aria-hidden="true"></span> Open to transaction-oriented finance roles</div>
+          <h1>Finance professional who delivers clean reporting and decision-ready analysis.</h1>
+          <p class="tagline">
+            I’m Devansh Shah — a finance and accounting professional with hands-on experience in <b>US GAAP reporting</b>,
+            month-end close and reconciliations, and strong <b>valuation / modeling</b> exposure through MS Finance projects.
+            I enjoy roles where accuracy, ownership, and clear communication drive real business outcomes.
+          </p>
+
+          <div class="ctaRow">
+            <a class="btn primary" href="#projects">↳ View projects</a>
+
+            <!-- Replace placeholders below -->
+            <a class="btn" href="mailto:YOUR.EMAIL@example.com">✉ Email</a>
+            <a class="btn" href="https://www.linkedin.com/in/YOUR-HANDLE" target="_blank" rel="noopener">in LinkedIn</a>
+          </div>
+
+          <div class="chips" aria-label="Highlights">
+            <span class="chip">MS in Finance (STEM) — UIUC</span>
+            <span class="chip">US CPA (passed all 4 exams)</span>
+            <span class="chip">Chartered Accountant (India)</span>
+            <span class="chip">CFA Level I (passed)</span>
+          </div>
+
+          <div class="mini">Tip: keep the homepage clean; store depth in the “View details” pop-ups.</div>
+        </div>
+
+        <aside class="panel quick reveal" aria-label="Quick facts">
+          <h3>Quick Facts</h3>
+
+          <div class="fact"><span>Location</span><b>Hartford, CT (USA)</b></div>
+          <div class="fact"><span>Focus</span><b>Reporting • Valuation • Deals</b></div>
+          <div class="fact"><span>Open to</span><b>Relocation (role fit)</b></div>
+
+          <div class="fact">
+            <span>Email</span>
+            <b>
+              <code id="emailText">YOUR.EMAIL@example.com</code>
+              <button class="copy" id="copyEmail" type="button" aria-label="Copy email">Copy</button>
+            </b>
+          </div>
+
+          <div class="fact"><span>Resume</span><b><a href="assets/Devansh_Shah_Resume.pdf" target="_blank" rel="noopener">Download PDF</a></b></div>
+          <div class="fact"><span>LinkedIn</span><b><a href="https://www.linkedin.com/in/YOUR-HANDLE" target="_blank" rel="noopener">Open profile</a></b></div>
+
+          <div class="moreRow">
+            <button class="btn ghost" type="button" data-open="aboutLong">More about me</button>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>About</h2>
+            <p>Short on the page. Deeper context opens in a consistent premium pop-up.</p>
+          </div>
+          <span class="badge">Clean + clickable</span>
+        </div>
+
+        <div class="grid2">
+          <article class="card reveal">
+            <div class="cardTop">
+              <div>
+                <h3 class="title">A finance profile built on fundamentals</h3>
+                <div class="meta">
+                  <span>Accounting discipline</span><span>•</span>
+                  <span>Modeling & valuation projects</span><span>•</span>
+                  <span>Clear communication</span>
+                </div>
+              </div>
+              <span class="badge">Summary</span>
+            </div>
+
+            <p class="small">
+              I combine strong reporting discipline with analysis that supports decisions.
+              I’m comfortable going deep in the details (reconciliations, disclosures, controls) and stepping back to connect the numbers
+              to outcomes (cash flow, profitability, transaction logic).
+            </p>
+
+            <div class="moreRow">
+              <button class="btn" type="button" data-open="aboutWorkstyle">How I work</button>
+              <button class="btn" type="button" data-open="targetRoles">What I’m targeting</button>
+            </div>
+          </article>
+
+          <aside class="card reveal">
+            <div class="cardTop">
+              <div>
+                <h3 class="title">At a glance</h3>
+                <div class="meta"><span>Highlights</span></div>
+              </div>
+              <span class="badge">Snapshot</span>
+            </div>
+
+            <ul>
+              <li><b>Current:</b> Finance Associate — close, reconciliations, reporting improvement.</li>
+              <li><b>Past:</b> PwC India — CMAAS (reporting advisory) + Audit foundation.</li>
+              <li><b>Academics:</b> MS in Finance (STEM) — UIUC.</li>
+              <li><b>Credentials:</b> US CPA, CA (India), CFA Level I (passed).</li>
+            </ul>
+
+            <div class="moreRow">
+              <button class="btn" type="button" data-open="highlights">Key highlights</button>
+            </div>
+          </aside>
+        </div>
+      </div>
+      <div class="sectionSep" aria-hidden="true"></div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>Professional Experience</h2>
+            <p>Readable bullets on the page. Full detail in the same premium pop-up style.</p>
+          </div>
+          <span class="badge">Impact • ownership</span>
+        </div>
+
+        <div class="grid3">
+          <article class="card reveal">
+            <div class="cardTop">
+              <div>
+                <h3 class="title">Aorbis Inc.</h3>
+                <div class="meta"><span><b>Finance Associate</b></span><span>•</span><span>Hartford, CT</span></div>
+              </div>
+              <span class="badge">Feb 2026 – Present</span>
+            </div>
+            <ul>
+              <li>Support month-end close, journal entries, and balance sheet reconciliations to improve reporting reliability.</li>
+              <li>Drive cleanup of legacy account issues to strengthen the balance sheet ahead of financing discussions.</li>
+              <li>Partner cross-functionally to align operations with finance tracking and documentation discipline.</li>
+            </ul>
+            <div class="moreRow"><button class="btn" type="button" data-open="expAorbis">View details</button></div>
+          </article>
+
+          <article class="card reveal">
+            <div class="cardTop">
+              <div>
+                <h3 class="title">PwC India</h3>
+                <div class="meta"><span><b>Associate 2 — CMAAS</b></span><span>•</span><span>Mumbai</span></div>
+              </div>
+              <span class="badge">Oct 2022 – Apr 2024</span>
+            </div>
+            <ul>
+              <li>Supported transitions and advisory across standards (US GAAP / IFRS / Ind AS) and disclosure readiness.</li>
+              <li>Performed detailed analyses of revenue contracts and reporting impacts to support compliance and audit queries.</li>
+              <li>Recognized for ownership and execution (“Team Above & Beyond”).</li>
+            </ul>
+            <div class="moreRow"><button class="btn" type="button" data-open="expPwcCmaas">View details</button></div>
+          </article>
+
+          <article class="card reveal">
+            <div class="cardTop">
+              <div>
+                <h3 class="title">PwC India</h3>
+                <div class="meta"><span><b>Article Trainee — Audit & Assurance</b></span><span>•</span><span>Mumbai</span></div>
+              </div>
+              <span class="badge">Sep 2019 – Sep 2022</span>
+            </div>
+            <ul>
+              <li>Built audit fundamentals: walkthroughs, testing, and evidence-based documentation discipline.</li>
+              <li>Supported financial statement analysis and issue resolution with structured client coordination.</li>
+              <li>Developed a controls mindset useful for reporting and diligence-style work.</li>
+            </ul>
+            <div class="moreRow"><button class="btn" type="button" data-open="expPwcAudit">View details</button></div>
+          </article>
+        </div>
+      </div>
+      <div class="sectionSep" aria-hidden="true"></div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>Education</h2>
+            <p>Academic background supporting fundamentals and modeling-heavy work.</p>
+          </div>
+          <span class="badge">MSF • BCom</span>
+        </div>
+
+        <div class="grid3">
+          <article class="card reveal">
+            <div class="cardTop">
+              <div>
+                <h3 class="title">University of Illinois Urbana-Champaign</h3>
+                <div class="meta"><span><b>MS in Finance (STEM)</b></span><span>•</span><span>Champaign, IL</span></div>
+              </div>
+              <span class="badge">Aug 2024 – Dec 2025</span>
+            </div>
+            <ul>
+              <li>Valuation, portfolio analysis, and decision-making under uncertainty.</li>
+              <li>Macro-driven portfolio strategy and scenario-based DCF thinking.</li>
+              <li>Presentation-style deliverables (model + narrative).</li>
+            </ul>
+            <div class="moreRow"><button class="btn" type="button" data-open="eduUiuc">View details</button></div>
+          </article>
+
+          <article class="card reveal">
+            <div class="cardTop">
+              <div>
+                <h3 class="title">University of Mumbai</h3>
+                <div class="meta"><span><b>BCom</b></span><span>•</span><span>Mumbai</span></div>
+              </div>
+              <span class="badge">May 2016 – May 2019</span>
+            </div>
+            <ul>
+              <li>Foundation in accounting, finance, and business analysis.</li>
+              <li>Prepared for professional qualifications alongside academics.</li>
+            </ul>
+            <div class="moreRow"><button class="btn" type="button" data-open="eduMumbai">View details</button></div>
+          </article>
+
+          <article class="card reveal">
+            <div class="cardTop">
+              <div>
+                <h3 class="title">Professional Development</h3>
+                <div class="meta"><span>Credentials + continued learning</span></div>
+              </div>
+              <span class="badge">Ongoing</span>
+            </div>
+            <ul>
+              <li>US CPA — passed all four exam sections.</li>
+              <li>Chartered Accountant (India).</li>
+              <li>CFA Level I — passed (Level II planned / in progress).</li>
+            </ul>
+            <div class="moreRow"><button class="btn" type="button" data-open="eduDev">View details</button></div>
+          </article>
+        </div>
+      </div>
+      <div class="sectionSep" aria-hidden="true"></div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certs">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>Certifications & Licenses</h2>
+            <p>Credentials reinforcing accounting discipline and markets knowledge.</p>
+          </div>
+          <span class="badge">CPA • CA • CFA</span>
+        </div>
+
+        <div class="grid3">
+          <article class="card reveal">
+            <div class="cardTop">
+              <div><h3 class="title">US CPA</h3><div class="meta"><span>Exam Passed</span></div></div>
+              <span class="badge">Completed</span>
+            </div>
+            <p class="small">Strong base across US GAAP, audit concepts, regulation, and business environment topics.</p>
+            <div class="moreRow"><button class="btn" type="button" data-open="certCpa">View details</button></div>
+          </article>
+
+          <article class="card reveal">
+            <div class="cardTop">
+              <div><h3 class="title">Chartered Accountant (India)</h3><div class="meta"><span>CA Qualification</span></div></div>
+              <span class="badge">Completed</span>
+            </div>
+            <p class="small">Deep fundamentals in financial reporting, assurance, and professional ethics.</p>
+            <div class="moreRow"><button class="btn" type="button" data-open="certCa">View details</button></div>
+          </article>
+
+          <article class="card reveal">
+            <div class="cardTop">
+              <div><h3 class="title">CFA Program</h3><div class="meta"><span>Level I — Passed</span></div></div>
+              <span class="badge">Level II planned</span>
+            </div>
+            <p class="small">Markets, portfolio, and investment analysis foundation supporting buy-side interest.</p>
+            <div class="moreRow"><button class="btn" type="button" data-open="certCfa">View details</button></div>
+          </article>
+        </div>
+      </div>
+      <div class="sectionSep" aria-hidden="true"></div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>Projects</h2>
+            <p>Compact cards, premium pop-ups (case study style) for deep detail.</p>
+          </div>
+          <span class="badge">Filter + pop-ups</span>
+        </div>
+
+        <div class="filters" role="toolbar" aria-label="Project filters">
+          <button class="filterBtn active" type="button" data-filter="all">All</button>
+          <button class="filterBtn" type="button" data-filter="portfolio">Portfolio</button>
+          <button class="filterBtn" type="button" data-filter="valuation">Valuation</button>
+          <button class="filterBtn" type="button" data-filter="mna">M&A</button>
+          <button class="filterBtn" type="button" data-filter="reporting">Reporting</button>
+        </div>
+
+        <div class="gridAuto" id="projectGrid">
+          <article class="card project reveal span4" data-category="portfolio">
+            <div class="cardTop">
+              <div><h3 class="title">Macro Modeling & Portfolio Strategy</h3><div class="meta"><span>Applied Portfolio Management</span></div></div>
+              <span class="badge">Portfolio</span>
+            </div>
+            <p>Built a macro regime framework and translated signals into sector tilts and scenario-backed stock views.</p>
+            <div class="tags"><span class="tag">Macro</span><span class="tag">Random Forest</span><span class="tag">Scenario DCF</span></div>
+            <div class="moreRow"><button class="btn" type="button" data-open="projApm">View details</button></div>
+          </article>
+
+          <article class="card project reveal span4" data-category="mna">
+            <div class="cardTop">
+              <div><h3 class="title">Strategic Financial Analysis — SpartanNash (SPTN)</h3><div class="meta"><span>IB-style analysis</span></div></div>
+              <span class="badge">M&A</span>
+            </div>
+            <p>Deal-style framing: drivers, valuation logic, and an interview-ready narrative linking inputs to outputs.</p>
+            <div class="tags"><span class="tag">Drivers</span><span class="tag">Valuation</span><span class="tag">Narrative</span></div>
+            <div class="moreRow"><button class="btn" type="button" data-open="projSpartan">View details</button></div>
+          </article>
+
+          <article class="card project reveal span4" data-category="valuation">
+            <div class="cardTop">
+              <div><h3 class="title">Nike × Lululemon (Hypothetical M&A)</h3><div class="meta"><span>Valuation + synergy logic</span></div></div>
+              <span class="badge">Valuation</span>
+            </div>
+            <p>Built an intrinsic valuation view and discussed synergy value and risk-adjusted discounting concepts.</p>
+            <div class="tags"><span class="tag">DCF</span><span class="tag">Synergies</span><span class="tag">Risk-adjusted</span></div>
+            <div class="moreRow"><button class="btn" type="button" data-open="projNikeLulu">View details</button></div>
+          </article>
+
+          <article class="card project reveal span4" data-category="reporting">
+            <div class="cardTop">
+              <div><h3 class="title">US GAAP / IFRS Reporting (Practice)</h3><div class="meta"><span>Standards → statement impact</span></div></div>
+              <span class="badge">Reporting</span>
+            </div>
+            <p>Applied standards in practical contexts: documentation, disclosures, and explainable accounting conclusions.</p>
+            <div class="tags"><span class="tag">US GAAP</span><span class="tag">IFRS</span><span class="tag">Disclosures</span></div>
+            <div class="moreRow"><button class="btn" type="button" data-open="projGaap">View details</button></div>
+          </article>
+
+          <!-- Optional placeholders you can replace with 2 more real projects -->
+          <article class="card project reveal span4" data-category="valuation">
+            <div class="cardTop">
+              <div><h3 class="title">Company Valuation Case (Add your pick)</h3><div class="meta"><span>Swap with your best valuation</span></div></div>
+              <span class="badge">Valuation</span>
+            </div>
+            <p>Replace this with your strongest DCF/comps case and keep the deep detail in the pop-up.</p>
+            <div class="tags"><span class="tag">DCF</span><span class="tag">Comps</span><span class="tag">Sensitivity</span></div>
+            <div class="moreRow"><button class="btn" type="button" data-open="projPlaceholderVal">View details</button></div>
+          </article>
+
+          <article class="card project reveal span4" data-category="mna">
+            <div class="cardTop">
+              <div><h3 class="title">Deal / Diligence Case (Add your pick)</h3><div class="meta"><span>Swap with your best deal</span></div></div>
+              <span class="badge">M&A</span>
+            </div>
+            <p>Add one end-to-end transaction case and keep the structure + assumptions in the pop-up.</p>
+            <div class="tags"><span class="tag">Diligence</span><span class="tag">Synergies</span><span class="tag">Memo</span></div>
+            <div class="moreRow"><button class="btn" type="button" data-open="projPlaceholderDeal">View details</button></div>
+          </article>
+        </div>
+      </div>
+      <div class="sectionSep" aria-hidden="true"></div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>Skills</h2>
+            <p>Grouped the way hiring teams evaluate finance candidates.</p>
+          </div>
+          <span class="badge">Readable tags</span>
+        </div>
+
+        <div class="gridAuto">
+          <article class="card reveal span6">
+            <div class="cardTop">
+              <div><h3 class="title">Finance & Analysis</h3><div class="meta"><span>Decision-ready outputs</span></div></div>
+              <span class="badge">Core</span>
+            </div>
+            <div class="pillset">
+              <span class="pill">Financial statement analysis</span>
+              <span class="pill">Working capital analysis</span>
+              <span class="pill">Valuation fundamentals</span>
+              <span class="pill">Scenario thinking</span>
+              <span class="pill">Portfolio perspective</span>
+              <span class="pill">Executive summaries</span>
+            </div>
+          </article>
+
+          <article class="card reveal span6">
+            <div class="cardTop">
+              <div><h3 class="title">Accounting & Reporting</h3><div class="meta"><span>Rigor + documentation</span></div></div>
+              <span class="badge">Strength</span>
+            </div>
+            <div class="pillset">
+              <span class="pill">US GAAP</span>
+              <span class="pill">IFRS awareness</span>
+              <span class="pill">Month-end close</span>
+              <span class="pill">Reconciliations</span>
+              <span class="pill">Controls mindset</span>
+              <span class="pill">Audit-ready support</span>
+            </div>
+          </article>
+
+          <article class="card reveal span6">
+            <div class="cardTop">
+              <div><h3 class="title">Tools</h3><div class="meta"><span>Execution</span></div></div>
+              <span class="badge">Practical</span>
+            </div>
+            <div class="pillset">
+              <span class="pill">Excel (advanced)</span>
+              <span class="pill">PowerPoint</span>
+              <span class="pill">QuickBooks</span>
+              <span class="pill">SAS (coursework)</span>
+              <span class="pill">Financial models</span>
+            </div>
+          </article>
+
+          <article class="card reveal span6">
+            <div class="cardTop">
+              <div><h3 class="title">Leadership & Communication</h3><div class="meta"><span>Clarity under pressure</span></div></div>
+              <span class="badge">Soft skills</span>
+            </div>
+            <div class="pillset">
+              <span class="pill">Stakeholder management</span>
+              <span class="pill">Structured writing</span>
+              <span class="pill">Problem-solving</span>
+              <span class="pill">Ownership mindset</span>
+              <span class="pill">Fast learning</span>
+              <span class="pill">Team collaboration</span>
+            </div>
+          </article>
+
+          <article class="card reveal span12">
+            <div class="cardTop">
+              <div><h3 class="title">Awards & Recognition</h3><div class="meta"><span>Selected highlight</span></div></div>
+              <span class="badge">Recognition</span>
+            </div>
+            <ul>
+              <li>PwC — “Team Above & Beyond” recognition for ownership and execution quality.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+      <div class="sectionSep" aria-hidden="true"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>Let’s Connect</h2>
+            <p>Simple contact options (no backend required). The form opens an email draft.</p>
+          </div>
+          <span class="badge">Easy</span>
+        </div>
+
+        <div class="contactGrid">
+          <article class="card reveal">
+            <div class="cardTop">
+              <div><h3 class="title">Contact</h3><div class="meta"><span>Replace placeholders with your real links</span></div></div>
+              <span class="badge">Details</span>
+            </div>
+            <ul>
+              <li><b>Email:</b> <a href="mailto:YOUR.EMAIL@example.com">YOUR.EMAIL@example.com</a></li>
+              <li><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/YOUR-HANDLE" target="_blank" rel="noopener">linkedin.com/in/YOUR-HANDLE</a></li>
+              <li><b>Location:</b> Hartford, CT</li>
+              <li><b>Open to:</b> Relocation based on role fit</li>
+            </ul>
+            <div class="moreRow">
+              <a class="btn" href="mailto:YOUR.EMAIL@example.com?subject=Portfolio%20Inquiry%20-%20Devansh%20Shah">✉ Email me</a>
+              <a class="btn" href="assets/Devansh_Shah_Resume.pdf" target="_blank" rel="noopener">⬇ Resume PDF</a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="cardTop">
+              <div><h3 class="title">Send a message</h3><div class="meta"><span>Opens your email app (mailto)</span></div></div>
+              <span class="badge">Form</span>
+            </div>
+
+            <form id="contactForm">
+              <label class="small" for="name">Your name</label>
+              <input class="input" id="name" name="name" placeholder="Jane Doe" autocomplete="name" />
+
+              <div style="height:10px"></div>
+
+              <label class="small" for="fromEmail">Your email</label>
+              <input class="input" id="fromEmail" name="email" placeholder="jane@company.com" autocomplete="email" />
+
+              <div style="height:10px"></div>
+
+              <label class="small" for="message">Message</label>
+              <textarea class="input" id="message" name="message" placeholder="Hi Devansh, we’d love to discuss..."></textarea>
+
+              <div class="moreRow">
+                <button class="btn primary" type="submit">↗ Open email draft</button>
+                <button class="btn" type="reset">Reset</button>
+              </div>
+
+              <p class="small" style="margin-top:10px">Direct email: <code>YOUR.EMAIL@example.com</code></p>
+            </form>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <!-- One Modal used across ALL sections -->
+    <div class="modalOverlay" id="modalOverlay" role="dialog" aria-modal="true" aria-label="Details">
+      <div class="modal" id="modal" tabindex="-1">
+        <div class="modalHead">
+          <div>
+            <h3 id="modalTitle">Details</h3>
+            <div class="meta" id="modalMeta"></div>
+          </div>
+          <button class="x" id="modalClose" type="button" aria-label="Close">✕</button>
+        </div>
+        <div class="modalBody" id="modalBody"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>© <span id="year"></span> Devansh Shah • Single-file premium portfolio.</div>
+      <div style="margin-top:8px"><a href="#top">Back to top</a></div>
+    </div>
+  </footer>
+
+  <script>
+    // Helpers
+    const $ = (sel, root=document) => root.querySelector(sel);
+    const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
+
+    // Year
+    $("#year").textContent = new Date().getFullYear();
+
+    // Toast
+    const toastEl = $("#toast");
+    function toast(msg){
+      toastEl.textContent = msg;
+      toastEl.classList.add("show");
+      clearTimeout(toastEl._t);
+      toastEl._t = setTimeout(()=>toastEl.classList.remove("show"), 1600);
+    }
+
+    // Theme
+    const themeBtn = $("#themeBtn");
+    const savedTheme = localStorage.getItem("theme");
+    const prefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+
+    function setTheme(mode){
+      document.documentElement.setAttribute("data-theme", mode);
+      localStorage.setItem("theme", mode);
+      toast(mode === "light" ? "Light mode" : "Dark mode");
+    }
+    if(savedTheme){ setTheme(savedTheme); }
+    else{ setTheme(prefersLight ? "light" : "dark"); }
+
+    themeBtn.addEventListener("click", ()=>{
+      const current = document.documentElement.getAttribute("data-theme") || "dark";
+      setTheme(current === "dark" ? "light" : "dark");
+    });
+
+    // Mobile menu
+    const menuBtn = $("#menuBtn");
+    const mobileMenu = $("#mobileMenu");
+    if(menuBtn){
+      menuBtn.addEventListener("click", ()=>{
+        const open = mobileMenu.classList.toggle("open");
+        menuBtn.setAttribute("aria-expanded", String(open));
+      });
+      $$("#mobileMenu a").forEach(a=>{
+        a.addEventListener("click", ()=>{
+          mobileMenu.classList.remove("open");
+          menuBtn.setAttribute("aria-expanded", "false");
+        });
+      });
+    }
+
+    // Scroll progress
+    const progressFill = $("#progressFill");
+    function updateProgress(){
+      const doc = document.documentElement;
+      const scrollTop = doc.scrollTop || document.body.scrollTop;
+      const scrollHeight = doc.scrollHeight - doc.clientHeight;
+      const p = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+      progressFill.style.width = `${p}%`;
+    }
+    window.addEventListener("scroll", updateProgress, { passive: true });
+    updateProgress();
+
+    // Active nav highlight + active section glow
+    const navLinks = $$("nav.links a");
+    const sectionIds = ["about","experience","education","certs","projects","skills","contact"];
+    const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+    const sectionObserver = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          const id = entry.target.id;
+          navLinks.forEach(a => a.setAttribute("aria-current", a.getAttribute("href") === `#${id}` ? "true" : "false"));
+          sections.forEach(s => s.classList.toggle("active", s.id === id));
+        }
+      });
+    }, { rootMargin: "-40% 0px -55% 0px", threshold: 0.01 });
+
+    sections.forEach(s => sectionObserver.observe(s));
+
+    // Reveal on scroll
+    const reveals = $$(".reveal");
+    const revealObserver = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add("in");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => revealObserver.observe(el));
+
+    // Copy email
+    const copyBtn = $("#copyEmail");
+    const emailText = $("#emailText");
+    if(copyBtn && emailText){
+      copyBtn.addEventListener("click", async ()=>{
+        try{
+          await navigator.clipboard.writeText(emailText.textContent.trim());
+          toast("Email copied");
+        }catch(e){
+          toast("Copy failed — please copy manually");
+        }
+      });
+    }
+
+    // Filters
+    const filterBtns = $$(".filterBtn");
+    const projectCards = $$("#projectGrid .project");
+    filterBtns.forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        const filter = btn.dataset.filter;
+        filterBtns.forEach(b=>b.classList.toggle("active", b === btn));
+        projectCards.forEach(card=>{
+          const cat = card.dataset.category;
+          const show = (filter === "all") || (cat === filter);
+          card.style.display = show ? "" : "none";
+        });
+      });
+    });
+
+    // One Modal across ALL sections
+    const modalOverlay = $("#modalOverlay");
+    const modal = $("#modal");
+    const modalClose = $("#modalClose");
+    const modalTitle = $("#modalTitle");
+    const modalMeta = $("#modalMeta");
+    const modalBody = $("#modalBody");
+
+    const DETAILS = {
+      aboutLong: {
+        title: "About Devansh",
+        meta: "Finance • Accounting • Valuation",
+        body: `
+          <p>
+            I’m a finance and accounting professional with a foundation built through PwC (audit + CMAAS) and
+            hands-on US operating experience as a Finance Associate. I like roles that blend rigor (clean reporting, audit-ready support)
+            with analysis that informs decisions (cash flow, profitability, transaction logic).
+          </p>
+          <h4>What I’m known for</h4>
+          <ul>
+            <li>Ownership mindset: I like taking responsibility for getting to a clean, defensible answer.</li>
+            <li>Clarity: I keep outputs explainable, reviewer-friendly, and decision-ready.</li>
+            <li>Balance: detail orientation without losing sight of the business “so what”.</li>
+          </ul>
+        `
+      },
+      aboutWorkstyle: {
+        title: "How I Work",
+        meta: "Structured • Auditable • Communicative",
+        body: `
+          <ul>
+            <li><b>Start with the question</b> — what decision are we supporting?</li>
+            <li><b>Define assumptions</b> — make them explicit, reasonable, and testable.</li>
+            <li><b>Build clean analysis</b> — avoid black boxes; keep the logic traceable.</li>
+            <li><b>Pressure-test</b> — sensitivities, scenarios, and “what would change my view”.</li>
+            <li><b>Write the takeaway</b> — a short narrative someone can act on immediately.</li>
+          </ul>
+        `
+      },
+      targetRoles: {
+        title: "Roles I’m Targeting",
+        meta: "Transaction-oriented finance",
+        body: `
+          <ul>
+            <li>Valuation / Corporate Finance / FP&A with strong analytical scope</li>
+            <li>Financial Due Diligence / Transaction Advisory</li>
+            <li>Investment analysis roles (equity research / portfolio / investments)</li>
+            <li>M&A / deal-oriented finance roles aligned with modeling + narrative work</li>
+          </ul>
+        `
+      },
+      highlights: {
+        title: "Key Highlights",
+        meta: "Short + recruiter-friendly",
+        body: `
+          <ul>
+            <li>MS in Finance (STEM) — UIUC (Dec 2025)</li>
+            <li>US CPA — passed all four exam sections</li>
+            <li>Chartered Accountant (India)</li>
+            <li>CFA Level I — passed</li>
+            <li>PwC India experience across advisory/reporting and audit foundations</li>
+            <li>Current Finance Associate experience focused on close, balance sheet quality, and reporting improvements</li>
+          </ul>
+        `
+      },
+
+      expAorbis: {
+        title: "Aorbis Inc. — Finance Associate",
+        meta: "Feb 2026 – Present • Hartford, CT",
+        body: `
+          <p>
+            In my current role, I work across finance and accounting: close execution, balance sheet quality, and documentation discipline—
+            with a focus on making reporting reliable and lender-ready.
+          </p>
+          <h4>Scope & examples</h4>
+          <ul>
+            <li>Month-end close support, journal entries, and reconciliations to tighten reporting accuracy and audit readiness.</li>
+            <li>Balance sheet cleanup and root-cause fixes to reduce recurring issues and improve financial statement quality.</li>
+            <li>Support preparation for bank overdraft/loan financing by producing clean schedules and explanations.</li>
+            <li>In parallel: helped scale a new service segment (OSTE) by supporting structure/workflow decisions and execution planning.</li>
+          </ul>
+        `
+      },
+      expPwcCmaas: {
+        title: "PwC India — CMAAS (Associate 2)",
+        meta: "Oct 2022 – Apr 2024 • Mumbai",
+        body: `
+          <p>
+            CMAAS work focused on helping clients meet global reporting requirements and preparing work that stands up to audit scrutiny.
+          </p>
+          <h4>What I did</h4>
+          <ul>
+            <li>Supported transitions and advisory across standards (IFRS, US GAAP, Ind AS), including disclosure considerations.</li>
+            <li>Performed detailed accounting analyses for revenue contracts and prepared clear documentation for financial reporting.</li>
+            <li>Supported management by resolving auditor queries and supporting close-related workstreams during a client secondment.</li>
+            <li>Worked with cross-border stakeholders and delivered under tight timelines.</li>
+          </ul>
+          <h4>Recognition</h4>
+          <ul>
+            <li>“Team Above & Beyond” recognition for ownership and execution quality.</li>
+          </ul>
+        `
+      },
+      expPwcAudit: {
+        title: "PwC India — Audit & Assurance (Article Trainee)",
+        meta: "Sep 2019 – Sep 2022 • Mumbai",
+        body: `
+          <p>
+            This role built my fundamentals: evidence, documentation, and control discipline—skills I use directly in reporting and diligence-style work.
+          </p>
+          <h4>What I learned</h4>
+          <ul>
+            <li>Walkthroughs, audit testing, and high-quality workpaper standards.</li>
+            <li>Financial statement understanding: tying account movements to business activity.</li>
+            <li>Communicating issues and resolving review notes quickly and cleanly.</li>
+          </ul>
+        `
+      },
+
+      eduUiuc: {
+        title: "UIUC — MS in Finance (STEM)",
+        meta: "Aug 2024 – Dec 2025",
+        body: `
+          <p>
+            My MSF strengthened my modeling toolkit and how I communicate investment/finance decisions clearly using data + narrative.
+          </p>
+          <h4>Representative work</h4>
+          <ul>
+            <li>Macro regime modeling and portfolio strategy (Random Forest forecasts on ISM PMI and CPI).</li>
+            <li>Scenario-based company analysis and DCF thinking grounded in drivers and risk.</li>
+            <li>Coursework-style deliverables that mirror real-world memos and presentations.</li>
+          </ul>
+        `
+      },
+      eduMumbai: {
+        title: "University of Mumbai — BCom",
+        meta: "May 2016 – May 2019",
+        body: `
+          <ul>
+            <li>Built foundational knowledge in accounting, finance, and business basics.</li>
+            <li>Prepared for professional qualifications alongside academics (CA track).</li>
+          </ul>
+        `
+      },
+      eduDev: {
+        title: "Professional Development",
+        meta: "Credentials + continued learning",
+        body: `
+          <ul>
+            <li><b>US CPA</b> — passed all four exam sections</li>
+            <li><b>Chartered Accountant (India)</b></li>
+            <li><b>CFA Level I</b> — passed (Level II planned / in progress)</li>
+          </ul>
+        `
+      },
+
+      certCpa: {
+        title: "US CPA — Exam Passed",
+        meta: "Accounting • Audit • Regulation • Business",
+        body: `<p>CPA strengthened my foundation in US GAAP, audit concepts, regulation, and business environment topics—useful for roles requiring strong reporting discipline.</p>`
+      },
+      certCa: {
+        title: "Chartered Accountant (India)",
+        meta: "Reporting • Assurance • Professional ethics",
+        body: `<p>CA reinforced deep accounting fundamentals and an assurance mindset—useful for close, reporting quality, and diligence-style work.</p>`
+      },
+      certCfa: {
+        title: "CFA Level I — Passed",
+        meta: "Markets • Portfolio • Investment analysis",
+        body: `<p>CFA Level I built strong capital markets and portfolio foundations and supports my interest in investments and transaction-oriented roles.</p>`
+      },
+
+      projApm: {
+        title: "Macro Modeling & Portfolio Strategy",
+        meta: "Applied Portfolio Management",
+        body: `
+          <p>Built a data-driven macro framework and translated macro signals into sector/style tilts and stock-level views.</p>
+          <h4>What I built</h4>
+          <ul>
+            <li>Random Forest models forecasting <b>ISM Manufacturing PMI</b> and <b>CPI</b>.</li>
+            <li>Regime interpretation and portfolio positioning logic (defensive + inflation-aware tilts).</li>
+            <li>Scenario-based DCF support and recommendation-style outputs.</li>
+          </ul>
+        `
+      },
+      projSpartan: {
+        title: "Strategic Financial Analysis — SpartanNash (SPTN)",
+        meta: "IB-style analysis",
+        body: `
+          <p>Structured a transaction-style story: value drivers, assumptions, sensitivities, and a defendable conclusion.</p>
+          <h4>How I approached it</h4>
+          <ul>
+            <li>Driver focus: margins, growth, working capital, operating leverage.</li>
+            <li>Assumption transparency + sensitivity testing to show what matters most.</li>
+            <li>Communication: clear “so what” aligned with hiring-manager evaluation.</li>
+          </ul>
+        `
+      },
+      projNikeLulu: {
+        title: "Nike × Lululemon (Hypothetical M&A)",
+        meta: "Valuation + synergy logic",
+        body: `
+          <p>Built an intrinsic valuation view and a structured synergy discussion with risk-adjusted discounting concepts.</p>
+          <h4>Key components</h4>
+          <ul>
+            <li>Standalone valuation framing and scenario sensitivity.</li>
+            <li>Synergy categories and disciplined assumptions.</li>
+            <li>Risk-adjusted view for synergy discounting (integration/execution risk).</li>
+          </ul>
+        `
+      },
+      projGaap: {
+        title: "US GAAP / IFRS Reporting (Practice)",
+        meta: "Standards → statement impact",
+        body: `
+          <p>Focused on explainable conclusions and audit-ready support—connecting standards to practical financial statement impacts.</p>
+          <h4>Emphasis</h4>
+          <ul>
+            <li>Clear documentation and support trails.</li>
+            <li>Disclosure mindset: completeness, consistency, clarity.</li>
+            <li>Bridging standards to P&L / balance sheet outcomes.</li>
+          </ul>
+        `
+      },
+      projPlaceholderVal: {
+        title: "Company Valuation Case (Placeholder)",
+        meta: "Swap this with your strongest public-company valuation",
+        body: `
+          <p>Replace with your best valuation case and keep deep detail here.</p>
+          <h4>Recommended structure</h4>
+          <ul>
+            <li>Objective (what decision the valuation supports)</li>
+            <li>Approach (DCF drivers, comps, assumptions)</li>
+            <li>Outputs (implied range + sensitivities)</li>
+            <li>What would change your view</li>
+          </ul>
+        `
+      },
+      projPlaceholderDeal: {
+        title: "Deal / Diligence Case (Placeholder)",
+        meta: "Swap this with your best transaction case",
+        body: `
+          <p>Replace with your strongest end-to-end deal case.</p>
+          <h4>Recommended structure</h4>
+          <ul>
+            <li>Rationale + key risks</li>
+            <li>Valuation + scenarios</li>
+            <li>Integration/diligence priorities</li>
+            <li>Clear conclusion</li>
+          </ul>
+        `
+      }
+    };
+
+    function openModal(key){
+      const d = DETAILS[key];
+      if(!d) return;
+      modalTitle.textContent = d.title;
+      modalMeta.textContent = d.meta || "";
+      modalBody.innerHTML = d.body || "";
+      modalOverlay.classList.add("open");
+      document.body.style.overflow = "hidden";
+      setTimeout(()=>modal.focus(), 0);
+    }
+    function closeModal(){
+      modalOverlay.classList.remove("open");
+      document.body.style.overflow = "";
+    }
+
+    $$("[data-open]").forEach(btn=>{
+      btn.addEventListener("click", ()=> openModal(btn.dataset.open));
+    });
+
+    modalClose.addEventListener("click", closeModal);
+    modalOverlay.addEventListener("click", (e)=>{ if(e.target === modalOverlay) closeModal(); });
+    document.addEventListener("keydown", (e)=>{ if(e.key === "Escape" && modalOverlay.classList.contains("open")) closeModal(); });
+
+    // Contact form: opens mailto draft
+    const contactForm = $("#contactForm");
+    if(contactForm){
+      contactForm.addEventListener("submit", (e)=>{
+        e.preventDefault();
+        const name = ($("#name").value || "").trim();
+        const fromEmail = ($("#fromEmail").value || "").trim();
+        const message = ($("#message").value || "").trim();
+
+        const to = "YOUR.EMAIL@example.com"; // replace
+        const subject = encodeURIComponent(`Portfolio inquiry${name ? " - " + name : ""}`);
+        const body = encodeURIComponent(
+          `Hi Devansh,\n\n${message || "[Write your message here]"}\n\n` +
+          `${name ? "Name: " + name + "\n" : ""}` +
+          `${fromEmail ? "Email: " + fromEmail + "\n" : ""}` +
+          `\nBest,\n${name || ""}`
+        );
+
+        window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+      });
+    }
+  </script>
+</body>
+</html>
